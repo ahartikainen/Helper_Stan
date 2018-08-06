@@ -7,6 +7,7 @@ real_path() {
     [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
 }
 
+############ FILL HERE ############
 stan_path="<full_path_here>/cmdstan-2.16.0"
 
 stan_make() {
