@@ -13,6 +13,7 @@ stan_make() {
     local output_relative=${@: -1}
     local head_args=${@:1:$#-1} 
     local output=$(real_path $output_relative)
+    echo "make -C $stan_path $head_args $output"
     make -C $stan_path $head_args $output
 }
 
@@ -29,6 +30,7 @@ stan_stanc() {
 }
 
 stan_cmd() {
+    echo "make -C $stan_path $@"
     make -C $stan_path $@
 }
 ```
