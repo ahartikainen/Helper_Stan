@@ -1,5 +1,5 @@
 # Helper_Stan
-Helper functions for CmdStan - works on both linux and osx
+Helper functions for CmdStan - works on both linux and osx (or atleast they should)
 
 
 ```
