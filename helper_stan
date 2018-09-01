@@ -13,15 +13,11 @@ stan_make() {
 }
 
 stan_summary() {
-    local summary="bin/stansummary"
-    local path=$stan_path/$summary
-    $path $@
+    $stan_path/bin/stansummary $@
 }
 
 stan_stanc() {
-    local stanc="bin/stanc"
-    local path=$stan_path/$stanc
-    $path $@
+    $stan_path/bin/stanc $@
 }
 
 stan_cmd() {
