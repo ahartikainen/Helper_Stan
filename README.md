@@ -19,23 +19,11 @@ stan_make() {
 }
 
 stan_summary() {
-    local summary="bin/stansummary"
-    local path=$stan_path/$summary
-    if [ ! -f $path ]; then
-        echo "Summary program is not compiled. Compiling now..."
-        stan_cmd build
-    fi
-    $path $@
+    $stan_path/bin/stansummary $@
 }
 
 stan_stanc() {
-    local stanc="bin/stanc"
-    local path=$stan_path/$stanc
-    if [ ! -f $path ]; then
-        echo "Stanc program is not compiled. Compiling now..."
-        stan_cmd build
-    fi
-    $path $@
+    $stan_path/bin/stanc $@
 }
 
 stan_cmd() {
@@ -49,6 +37,7 @@ stan_sampling() {
      ./$filename sample data file=$filename.data.R args
 }
 
+# not tested
 stan_sampling_nchain() {
      local filename=$1
      local chains=$2
